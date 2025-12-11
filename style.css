@@ -555,3 +555,46 @@ html, body { margin: 0; height: 100%; }
     background: #334155 !important;
     color: #ffffff !important;
 }
+/* ⚠️⚠️⚠️ REAL TOGGLE SWITCH STYLES (MINIMAL ADDITION) */
+
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-track {
+    width: 55px;
+    height: 26px;
+    background: #b1b1b1;
+    border-radius: 20px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.25s ease;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* ⚠️⚠️⚠️ TOGGLE BALL WITH ICON INSIDE */
+.toggle-ball {
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    display: flex;              /* ⚠️⚠️ */
+    justify-content: center;    /* ⚠️⚠️ */
+    align-items: center;        /* ⚠️⚠️ */
+    font-size: 14px;            /* ⚠️⚠️ */
+}
+
+
+/* DARK MODE TOGGLE POSITION */
+[data-theme="dark"] .toggle-track {
+    background: #4a4a4a;
+}
+
+[data-theme="dark"] .toggle-ball {
+    transform: translateX(28px);
+}
