@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Owner Email Login</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="header"></div>
+  <script src="header.js"></script>
+
+  <main class="container" style="display:flex; justify-content:center; align-items:center;">
+    <section class="card">
+      <h2 style="color:#3182ed; text-align: center;"><u>Owner Login</u></h2>
+
+      <form id="ownerSigninForm">
+
+        <label>Email:</label>
+        <input 
+          id="oi_email"
+          name="email"
+          type="email"
+          autocomplete="username"
+          required
+        >
+
+        <br>
+
+        <label>Password:</label>
+        <input 
+          id="oi_pass"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+        >
+
+        <div class="row" style="margin-top:12px;text-align:center">
+          <button class="btn" type="submit">Log In</button>
+        </div>
+
+        <p style="margin-top:12px;text-align:center">
+
+          <!-- FIXED: use normal links instead of buttons inside <a> -->
+          <a href="owner-signup.html" style="margin-right:10px;">
+            <button type="button">Create account</button>
+          </a>
+
+          <a href="owner-phone-login.html">
+            <button type="button">Use phone</button>
+          </a>
+
+        </p>
+
+      </form>
+
+      <p id="ownerSigninNote" class="muted small"></p>
+    </section>
+  </main>
+
+  <script src="ownerAuth.js"></script>
+
+</body>
+</html>

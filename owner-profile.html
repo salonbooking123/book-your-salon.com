@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Owner Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="ownerProfileNew.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <script src="header.js"></script>
+  <div class="container" style="max-width:1000px;margin:24px auto;">
+    <div class="card">
+      <span><h2 style="text-align: center;background-color:rgb(230, 122, 21)">Owner / Salon Profile</h2></span>
+      <label>Salon Name:</label><input id="salonName" placeholder="Enter Salon Name" required/><br>
+      <label>Owner Name:</label><input id="ownerName" placeholder="Your Full Name" required/><br>
+      <label>Phone No.</label><input id="ownerPhone" placeholder="i.e. 9876543210" required/><br>
+      <label>Address:</label><input id="address" placeholder="Enter full address" required/><br>
+      <label>Location (On Earth):</label>
+      <div style="display:flex;gap:8px">
+        <button id="detectLoc" class="btn ghost">Click</button>
+        <input id="lat" placeholder="latitude:i.e.25.89758" /><input id="lng" placeholder="longitude i.e.63.988756745" />
+      </div><br>
+      <label>Services:</label>
+      <div id="servicesEditor"></div>
+      <button id="addService" class="btn">Add New Service</button><br>
+      <div style="margin-top:12px;">
+        <button id="saveSalon" class="btn">Save Changes</button>
+        <button type="button" id="deleteAccountBtn" class="btn" style="background:red;">
+          Delete Account
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span><h3 style="text-align: center;background-color:rgb(44, 247, 115)">Queue / Customers in Line</h3></span>
+      <div id="queueList" style="text-align: center;">Loading…</div>
+    </div>
+  </div>
+</body>
+</html>
+

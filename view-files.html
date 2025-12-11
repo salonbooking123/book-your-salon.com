@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="pdf-wrapper">
+        <object id="pdfViewer" type="application/pdf">
+            <p>Cannot load PDF. <a id="pdfLink" href="#">Download</a></p>
+        </object>
+    </div>
+
+    <script>
+        // Get ?file= parameter from URL
+        const params = new URLSearchParams(window.location.search);
+        const pdfFile = params.get("file");
+
+        // Update object viewer
+        if (pdfFile) {
+            document.getElementById("pdfViewer").data = pdfFile;
+            document.getElementById("pdfLink").href = pdfFile;
+        }
+    </script>
+
+</body>
+</html>

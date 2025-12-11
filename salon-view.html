@@ -1,0 +1,35 @@
+<!-- ⚠️⚠️⚠️ salon-view.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Salon Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="salonView.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <script src="header.js"></script>
+  <div class="container" style="max-width:900px;margin:30px auto;">
+    <div class="card" id="salonCard">
+      <h2 id="salonName">Loading…</h2>
+      <div id="salonDesc"></div>
+      <p><strong>Services</strong></p>
+      <div id="servicesList"></div>
+      <p><strong>Contact:</strong> <span id="salonPhone">—</span></p>
+      <button id="locBtn" class="btn ghost">Check Location</button>
+    </div>
+
+    <div class="card">
+      <h3>Book Appointment</h3>
+      <label>Your Name</label><input id="custName" />
+      <label>Your Phone</label><input id="custPhone" />
+      <label>Service</label><select id="serviceSelect"></select>
+      <label>Date</label><input type="date" id="date" />
+      <label>Time</label><input type="time" id="time" />
+      <button id="bookBtn" class="btn">Book Appointment</button>
+      <div id="bookMsg" style="margin-top:12px"></div>
+    </div>
+  </div>
+</body>
+</html>

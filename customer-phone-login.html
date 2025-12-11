@@ -1,0 +1,33 @@
+<!-- ⚠️⚠️⚠️ customer-phone-login.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Phone Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="customer-phone-login.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <script src="header.js"></script>
+  <div class="container" style="max-width:480px;margin:36px auto;">
+    <h2 style="text-align:center;color:#3182ed"with Phone</h2>
+    <div class="card">
+      <label>Phone (+91):</label>
+      <input 
+        type="number" id="ou_phone" required 
+        maxlength="10" 
+        pattern="\d{10}" 
+        oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);" 
+        placeholder="e.g., 9876543210">
+      <button id="sendOtp" class="btn" style="width:100%;margin-top:12px">Send OTP</button>
+
+      <label style="margin-top:10px">Enter OTP:</label>
+      <input id="otp" type="number" placeholder="123456" required/>
+      <button id="verifyOtp" class="btn" style="width:100%;margin-top:12px">Verify & Login</button>
+      <div id="recaptcha-container"></div>
+    </div>
+  </div>
+</body>
+</html>
